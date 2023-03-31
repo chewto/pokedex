@@ -14,6 +14,32 @@
     width: 290px;
   }
 
+  .search-container{
+    display: flex;
+    justify-content: space-around;
+
+    #voice-search{
+      border: none;
+      background: $thirdColor;
+      padding: 4px;
+      transition: 350ms;
+
+      .micro{
+        color: $firstColorHover;
+        transition: 250ms;
+
+        &:hover{
+          color: $secondColor;
+        }
+      }
+
+      &:hover{
+        background: $firstColor;
+        cursor: pointer;
+      }
+    }
+  }
+
   #pokemon-search{
     padding: 10px 0 0 0;
     width: 80%;
