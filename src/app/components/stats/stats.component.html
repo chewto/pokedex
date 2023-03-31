@@ -1,0 +1,12 @@
+<div class="container">
+  <ng-container *ngIf="loadingIn$ | async as loading ; else content">
+    <div class="spinner">
+      <app-loader></app-loader>
+    </div>
+  </ng-container>
+  <ng-template #content>
+    <ul *ngFor="let stats of pokemonStatsIn" class="list-container">
+      <li class="list-element">{{stats.stat.name}}: <span>{{stats.base_stat}}</span></li>
+    </ul>
+  </ng-template>
+</div>

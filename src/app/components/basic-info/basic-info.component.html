@@ -1,0 +1,40 @@
+<div class="info-container">
+
+  <h3>Info</h3>
+
+  <ul class="info-container-list">
+    <li>Name:<span>{{pokemonInfoIn.name}}</span></li>
+    <li>Id:<span>{{pokemonInfoIn.id}}</span></li>
+    <li>Base experience:<span>{{pokemonInfoIn.base_experience}}</span></li>
+    <li>Height:<span>{{pokemonInfoIn.height}}</span></li>
+    <li>Weight:<span>{{pokemonInfoIn.weight}} lbs</span></li>
+  </ul>
+
+  <div class="info-types">
+    <h3>Types</h3>
+    <div class="info-types-container">
+      <div *ngFor="let type of pokemonTypesIn">
+        <span [ngClass]="{
+          'normal':type.type.name == 'normal',
+          'fire':type.type.name == 'fire',
+          'water':type.type.name == 'water',
+          'grass':type.type.name == 'grass',
+          'electric':type.type.name == 'electric',
+          'ice':type.type.name == 'ice',
+          'fighting':type.type.name == 'fighting',
+          'poison':type.type.name == 'poison',
+          'ground':type.type.name == 'ground',
+          'flying':type.type.name == 'flying',
+          'psychic':type.type.name == 'psychic',
+          'bug':type.type.name == 'bug',
+          'rock':type.type.name == 'rock',
+          'ghost':type.type.name == 'ghost',
+          'dark':type.type.name == 'dark',
+          'dragon':type.type.name == 'dragon',
+          'steel':type.type.name == 'steel',
+          'fairy':type.type.name == 'fairy'
+        }">{{type.type.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+
+
+
+
+  <div class="visualizer-container container container-small">
+    <ng-container *ngIf="loadingIn$ | async as loading ; else content">
+      <app-loader ></app-loader>
+    </ng-container>
+    <ng-template #content>
+      <div class="img-container" *ngIf="pokemonVisualizerIn">
+        <p>Front default</p>
+        <img [src]="pokemonVisualizerIn.front_default" alt=""  class="pokemon-img">
+      </div>
+      <div class="img-container" *ngIf="pokemonVisualizerIn.back_default == null">
+        <p>not avaible</p>
+      </div>
+      <div class="img-container" *ngIf="pokemonVisualizerIn.back_default">
+        <p>Back default</p>
+        <img [src]="pokemonVisualizerIn.back_default" alt="" class="pokemon-img">
+      </div>
+      <div class="img-container">
+        <p>Front shiny</p>
+        <img [src]="pokemonVisualizerIn.front_shiny" alt="" class="pokemon-img">
+      </div>
+      <div class="img-container" *ngIf="pokemonVisualizerIn.back_shiny== null">
+        <p>not avaible</p>
+      </div>
+      <div class="img-container" *ngIf="pokemonVisualizerIn.back_shiny">
+        <p>Back shiny</p>
+        <img [src]="pokemonVisualizerIn.back_shiny" alt="" class="pokemon-img">
+      </div>
+    </ng-template>
+  </div>
+
+

@@ -1,0 +1,43 @@
+@import '../../style-vars/style-vars.scss';
+
+.form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px 0;
+  width: 350px;
+  padding: 15px 5px;
+  transition: 350ms;
+  
+  @include media(xxsm){
+    width: 290px;
+  }
+
+  #pokemon-search{
+    padding: 10px 0 0 0;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid $thirdColor;
+    transition: 400ms;
+    text-align: center;
+  }
+
+  #pokemon-search:focus{
+    outline: none;
+    border-bottom: 2px solid $firstColor;
+  }
+
+  #search-btn{
+    background: $thirdColor;
+    color: $secondColor;
+    padding: 5px 10px;
+    border: none;
+    transition: 300ms;
+    cursor: pointer;
+  }
+  
+  #search-btn:hover{
+    background: $firstColor;
+  }
+}

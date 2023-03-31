@@ -1,0 +1,44 @@
+@import '../../style-vars/style-vars.scss';
+
+.visualizer-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .img-container{
+    padding: 10px 0;
+    transition: $transitionTime;
+    &:hover{
+      background: $firstColorHover;
+      border-radius: $borderRadius;
+    }
+    @include media(sm){
+      display: flex;
+      padding: 10px;
+    }
+
+    @include media(xsm){
+      margin: 3px 0;
+    }
+  }
+
+  .pokemon-img{
+    width: 150px;
+
+    @include media(sm){
+      width: 60px;
+    }
+  }
+}
+
+p{
+  text-align: center;
+  color: $secondColor;
+}
+
+.container-small{
+  @include media(xsm){
+    @include size(230px, 400px)
+  }
+}
+

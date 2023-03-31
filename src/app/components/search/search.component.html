@@ -1,0 +1,5 @@
+<form class="form">
+  <label for="pokemon-search">Introduce a pokemon id or a pokemon name</label>
+  <input type="text" id="pokemon-search" [formControl]="pokemonSearch" autocomplete="off">
+  <button type="submit" id="search-btn"  (click)="onSendPokemonId($event)">Search</button>
+</form>

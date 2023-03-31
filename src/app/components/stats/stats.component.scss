@@ -1,0 +1,17 @@
+@import "../../style-vars/style-vars.scss";
+
+.list-container {
+  list-style: none;
+
+  .list-element {
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 50px;
+    color: $secondColor;
+    transition: 350ms;
+  }
+
+  .list-element:hover{
+    background: $firstColorHover;
+  }
+}
