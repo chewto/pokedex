@@ -1,5 +1,12 @@
-<form class="form">
+<form [formGroup]="pokemonSearch" class="form">
   <label for="pokemon-search">Introduce a pokemon id or a pokemon name</label>
-  <input type="text" id="pokemon-search" [formControl]="pokemonSearch" autocomplete="off">
-  <button type="submit" id="search-btn"  (click)="onSendPokemonId($event)">Search</button>
+  <div class="search-container">
+    <input type="text" id="pokemon-search" formControlName="pokemon" autocomplete="off">
+    <button id="voice-search" (click)="onVoiceSearch()">
+      <span class="material-symbols-outlined micro">
+        mic
+      </span>
+    </button>
+  </div>
+  <button id="search-btn"  (click)="onSendPokemonId()">Search</button>
 </form>
